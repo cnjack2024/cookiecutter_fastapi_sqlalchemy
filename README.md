@@ -1,2 +1,1 @@
-# cookiecutter_fastapi_sqlalchemy
 FastAPI SQLAlchemy
