@@ -89,11 +89,11 @@ class ChoiceModel(BaseModel):
         从obj创建
         """
 
-        from base.models import ChoiceField
+        from base.models import ChoiceType
 
         object = None
 
-        if isinstance(obj, ChoiceField):
+        if isinstance(obj, ChoiceType):
             object = cls(code=obj.code, value=obj.value)
         elif isinstance(obj, tuple | list):
             object = cls(code=obj[0], value=obj[1])
