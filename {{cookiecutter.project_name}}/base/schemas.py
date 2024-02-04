@@ -54,9 +54,9 @@ class BaseModel(pydantic.BaseModel):
         从obj创建
         """
 
-        from base.models import Document
+        from base.models import Base
 
-        if isinstance(obj, Document):
+        if isinstance(obj, Base):
             object = cls.model_validate(
                 obj.dict(excludes=excludes, exclude_foreignkey=True)
             )
